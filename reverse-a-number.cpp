@@ -1,31 +1,22 @@
 #include <iostream>
 using namespace std;
 
-const int N = 50;
-
 int main()
 {
     int num;
-    int array[N];
 
     cout<<"Enter a number: ";
     cin>>num;
 
-    int i = 0;
+    int reverse = 0;
 
     while(num > 0)
     {
-        array[i] = num % 10;
+        reverse = reverse*10 + num % 10;
         num /= 10;
-        i++;
     }
 
-    cout<<"Reverse of number is: ";
-
-    for(int j = 0; j < i; j++)
-    {
-        cout<<array[j];
-    }
+    cout<<"Reverse of number is: "<<reverse<<endl;
 
     return 0;
 }
